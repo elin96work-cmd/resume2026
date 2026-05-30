@@ -1,10 +1,17 @@
 html {
   scroll-behavior: smooth;
 }
-#main {
-  background-image: url("../image/main.png");
+main {
+  background-image: url("./image/main.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: 25% 75%;
+  background-size: contain;
   min-height: 100vh;
+}
+@font-face {
+  font-family: "Cafe24SsongSsong";
+  src: url("https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Syongsyong.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
 }
