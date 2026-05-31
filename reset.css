@@ -15,3 +15,6 @@ main {
   font-weight: normal;
   font-display: swap;
 }
+a {
+  text-decoration: none;
+}
