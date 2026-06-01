@@ -71,11 +71,9 @@
 
 .mini_main-text {
   position: absolute;
-
   top: 60%;
   right: 20%;
   transform: translateY(-50%);
-
   max-width: 600px;
   text-align: left;
   z-index: 10;
@@ -116,4 +114,4 @@
   box-shadow: none;
   background-color: white;
 }
-/* ABOUT ME */
+/*  ABOUT  */
