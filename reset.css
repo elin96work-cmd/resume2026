@@ -18,3 +18,10 @@ main {
 a {
   text-decoration: none;
 }
+@font-face {
+  font-family: "NexonBazzi";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
