@@ -1,10 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
-main {
+.mini-main {
   background-image: url("./image/main.png");
   background-repeat: no-repeat;
-  background-position: 25% 75%;
+  background-position: 20% 50%;
   background-size: contain;
   min-height: 100vh;
 }
@@ -24,4 +24,21 @@ a {
     format("woff");
   font-weight: normal;
   font-display: swap;
+}
+#about {
+  background-color: #ffffff;
+  font-family:
+    "NexonBazzi", sans-serif; /* 기호에 맞는 귀여운 폰트로 변경 가능 */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
