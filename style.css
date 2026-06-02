@@ -114,7 +114,7 @@
   box-shadow: none;
   background-color: white;
 }
-/* -------------ABOUT--------------- */
+/* ------------------------about------------------------- */
 
 /* 제일 위에 핑크색 블럭 */
 .portfolio-section {
@@ -227,6 +227,7 @@
 
 .card-about {
   background-color: #4db6ac;
+  padding: 80px 30px 40px 40px;
 }
 .card-contact {
   background-color: #ce93d8;
@@ -263,6 +264,22 @@
 .info-list li .icon {
   margin-right: 8px;
   display: inline-block;
+}
+.info-list li a:hover {
+  text-decoration: underline;
+}
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+.icon svg {
+  width: 40px;
+  height: 40px;
 }
 
 /* --- 카드 스킬 --- */
@@ -306,3 +323,188 @@
   text-align: center;
   min-width: 120px;
 }
+
+/* -------------------like-------------------- */
+
+/* 전체 섹션 레이아웃 */
+.like-it-section {
+  position: relative;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 80px 20px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* 제목 폰트 및 테두리 */
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.title-container h1 {
+  background-color: #0cc0df; /* 하늘색 */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 4rem;
+  font-family: "Cafe24SsongSsong", sans-serif;
+  border: 4px solid #000000;
+  border-radius: 15px;
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+/* 본문 정렬 크기 */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* 이미지 영역 컨테이너 (정확한 영역 확보) */
+.image-container {
+  width: 130px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   정밀한 3D 카드 플립 효과 (왼쪽->오른쪽)
+========================================= */
+.flip-card {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* 입체감 깊이 설정 */
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* 부드러운 회전 곡선 */
+  transform-style: preserve-3d; /* 하위 요소들의 3D 속성 유지 */
+}
+
+/* 마우스를 올렸을 때 Y축으로 180도 회전 */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 앞면과 뒷면 겹치기 및 숨김 공통 처리 */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* 사파리 브라우저 호환 */
+  backface-visibility: hidden; /* 회전 시 뒷면을 숨김 */
+  border: 3px solid #000000; /* 네오 브루탈리즘 스타일 검은 테두리 */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 앞면 (마우스 올리기 전 - 왼쪽 사진) */
+.flip-card-front {
+  background-color: #bbb;
+  z-index: 2; /* 앞면에 우선순위 부여 */
+}
+
+/* 뒷면 (마우스 올린 후 - 오른쪽 사진) */
+.flip-card-back {
+  background-color: #bbb;
+  transform: rotateY(180deg); /* 미리 180도 뒤집어 숨겨둠 */
+}
+
+/* 이미지 꽉 차게 맞추기 */
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================
+   우측 말풍선 디자인 (모서리 비대칭)
+========================================= */
+.text-bubble {
+  flex-grow: 1;
+  border: 3px solid #000000;
+  padding: 30px 40px;
+  text-align: center;
+  border-radius: 15px 100px 100px 15px;
+  box-shadow: 5px 5px 0px #000000; /* 네오 브루탈리즘 그림자 효과 */
+}
+
+.text-bubble p {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* 각 행별 말풍선 색상 고유 지정 */
+.bubble-purple {
+  background-color: #dda2eb;
+}
+.bubble-cyan {
+  background-color: #1ed1db;
+}
+.bubble-yellow {
+  background-color: #ffe87a;
+}
+
+/* =========================================
+   배경 네모 상자 오브젝트 디자인
+========================================= */
+.bg-shape {
+  position: absolute;
+  border: 3px solid #000000;
+  z-index: 1;
+}
+
+.yellow-box-top {
+  top: 0;
+  left: 5%;
+  width: 350px;
+  height: 180px;
+  background-color: #ffde00;
+}
+.pink-box-top {
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 180px;
+  background-color: #f04e8b;
+}
+.pink-box-bottom {
+  bottom: 0;
+  left: 5%;
+  width: 400px;
+  height: 120px;
+  background-color: #f04e8b;
+}
+.mint-box-bottom {
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 150px;
+  background-color: #4ac7b6;
+}
+/* ------------------포트폴리오------------------- */

@@ -27,8 +27,7 @@ a {
 }
 #about {
   background-color: #ffffff;
-  font-family:
-    "NexonBazzi", sans-serif; /* 기호에 맞는 귀여운 폰트로 변경 가능 */
+  font-family: "NexonBazzi", sans-serif;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -36,6 +35,10 @@ a {
   align-items: center;
   min-height: 100vh;
   overflow: hidden;
+}
+#like {
+  background-color: #ffffff;
+  font-family: "NexonBazzi", sans-serif;
 }
 * {
   margin: 0;
