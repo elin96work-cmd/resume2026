@@ -25,23 +25,17 @@ a {
   font-weight: normal;
   font-display: swap;
 }
-#about {
-  background-color: #ffffff;
-  font-family: "NexonBazzi", sans-serif;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden;
-}
-#like {
-  background-color: #ffffff;
-  font-family: "NexonBazzi", sans-serif;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "NexonBazzi", cursive;
+}
+#main.mini-main {
+  margin-top: 3vw;
+}
+#about.portfolio-section {
+  margin-top: 6vw;
 }

@@ -1,7 +1,7 @@
-/* 사이트 헤더 */
+/* -----------------사이트 헤더 ------------------------*/
 .site-header {
   padding: 0;
-  height: 97px;
+  height: 80px;
   position: sticky;
   top: 0;
   border-bottom: 1px solid #5f4a47;
@@ -12,14 +12,14 @@
 .logo {
   margin: 0;
   display: inline-block;
-  line-height: 76px;
-  margin-top: 1%;
+  line-height: 120px;
+  margin-top: -1%;
   flex: 1;
 }
 .logo a {
   color: #5f4a47;
   font-family: "Cafe24SsongSsong", sans-serif;
-  font-size: 65px;
+  font-size: 60px;
   font-weight: normal;
   letter-spacing: -0.02em;
 }
@@ -29,7 +29,7 @@
   right: 32px;
   transform: translateY(-50%);
   justify-content: center;
-  margin-top: 0.5%;
+  margin-top: 0%;
 }
 .site-nav svg {
   width: 25px;
@@ -38,13 +38,13 @@
 .site-nav ul > li {
   margin-left: 30px;
   display: inline-block;
-  font-size: 20px;
-  line-height: 76px;
+  font-size: 35px;
+  line-height: 120px;
 }
 .site-nav a {
   position: relative;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 40px;
   font-family: "Cafe24SsongSsong", sans-serif;
   color: #5f4a47;
 }
@@ -56,13 +56,13 @@
   left: 0;
   bottom: -9px;
   border-radius: 999px;
-  background-color: #ff8fe3;
+  background-color: #ff71dc;
   transition: width 0.25s;
 }
 .site-nav a:hover::after {
   width: 100%;
 }
-/* 메인 텍스트*/
+/* ---------------메인 텍스트-----------------*/
 .mini-main {
   position: relative;
   width: 100%;
@@ -80,7 +80,7 @@
 }
 
 .mini_main-text p {
-  font-size: 40px;
+  font-size: 34px;
   font-family: "NexonBazzi", sans-serif;
   line-height: 2;
   margin-bottom: 20px;
@@ -106,7 +106,7 @@
 }
 
 .mini_main-text a:hover span {
-  color: rgb(22, 126, 145);
+  color: #44a6b8;
   font-weight: bold;
   text-decoration: none;
 }
@@ -114,397 +114,300 @@
   box-shadow: none;
   background-color: white;
 }
-/* ------------------------about------------------------- */
+/* ----------------메인사진 및 타이틀---------------- */
+.portfolio-main {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
 
-/* 제일 위에 핑크색 블럭 */
 .portfolio-section {
   position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #ffffff;
-  overflow: hidden;
-  padding: 60px 20px;
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: 1440 / 1024;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    #e54988 150px,
-    #000000 150px,
-    #000000 154px,
-    transparent 154px
-  );
 }
 
-/*  왼쪽 상단 옐로우 블럭 */
-.portfolio-section::before {
-  content: "";
+.background-layer {
   position: absolute;
   top: 0;
-  left: 5%;
-  width: 38%;
-  height: 120px;
-  background-color: #fbd700;
-  border-left: 4px solid #000000;
-  border-right: 4px solid #000000;
-  border-bottom: 4px solid #000000;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
-
-/* 왼쪽 하단 핑크색 배경 블록 */
-.portfolio-section::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-  width: 60%;
-  height: 80px;
-  background-color: #e54988;
-  border-top: 4px solid #000000;
-  border-left: 4px solid #000000;
-  border-right: 4px solid #000000;
-  z-index: 1;
-}
-
-/* 오른쪽 하단 민트색 배경 블록 */
-.bg-mint-block {
-  position: absolute;
-  bottom: 0;
-  right: 4%;
-  width: 32%;
-  height: 180px;
-  background-color: #4ec2b7;
-  border-top: 4px solid #000000;
-  border-left: 4px solid #000000;
-  border-right: 4px solid #000000;
-  z-index: 2; /* 핑크 블록보다 위로 올라오게 */
-}
-
-/* 콘텐츠 배치 설정 */
-.content-container {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-/* ---  메인 타이틀 (JEONGMIN PARK) --- */
-.main-title {
-  background-color: #0cc0df; /* 하늘색 */
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  font-size: 4rem;
-  font-family: "Cafe24SsongSsong", sans-serif;
-  border: 4px solid #000000;
-  border-radius: 15px;
-  width: 60%;
-  margin: 0 auto;
-  box-shadow: 8px 8px 0px 0px #000000;
-}
-
-/* --- (ABOUT & CONTACT) --- */
-.cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-
-.card {
-  position: relative;
-  border: 3px solid #000000;
-  border-radius: 16px;
-  padding: 60px 30px 30px 30px;
-  min-height: 250px;
-  box-shadow: 8px 8px 0px 0px #000000;
-  font-family: "NexonBazzi", sans-serif;
-}
-
-.card-about {
-  background-color: #4db6ac;
-  padding: 80px 30px 40px 40px;
-}
-.card-contact {
-  background-color: #ce93d8;
-}
-
-/* 카드 배지 (ABOUT ME, CONTACT, MY SKILL) */
-.card-badge {
-  position: absolute;
-  top: -15px;
-  left: 25%;
-  background-color: #ffd600; /* 노란색 */
-  color: #000000;
-  border: 3px solid #000000;
-  padding: 6px 40px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  box-shadow: 4px 4px 0px 0px #000000;
-}
-
-.info-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  color: #ffffff;
-  font-size: 2rem;
-}
-
-.info-list li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.info-list li .icon {
-  margin-right: 8px;
-  display: inline-block;
-}
-.info-list li a:hover {
-  text-decoration: underline;
-}
-.icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 30px;
-  height: 30px;
-  margin-right: 15px;
-}
-.icon svg {
-  width: 40px;
-  height: 40px;
-}
-
-/* --- 카드 스킬 --- */
-.card-skill {
-  position: relative;
-  background-color: #ffd600;
-  border: 3px solid #000000;
-  border-radius: 12px;
-  padding: 50px 40px 30px 40px;
-  box-shadow: 8px 8px 0px 0px #000000;
-  margin-bottom: 20px;
-}
-
-/* 스킬 배찌 */
-.card-skill .card-badge {
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #e94e77;
-  color: #ffffff;
-  padding: 8px 60px;
-  font-size: 2.5rem;
-}
-
-.skill-tags {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-/* 알약 모양 스킬 태그 */
-.tag {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 10px 35px;
-  border-radius: 50px;
-  font-size: 1.8rem;
-  flex: 1;
-  text-align: center;
-  min-width: 120px;
-}
-
-/* -------------------like-------------------- */
-
-/* 전체 섹션 레이아웃 */
-.like-it-section {
-  position: relative;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 80px 20px;
-  overflow: hidden;
-  background-color: #ffffff;
-}
-
-/* 제목 폰트 및 테두리 */
-.title-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-  position: relative;
-  z-index: 10;
-}
-
-.title-container h1 {
-  background-color: #0cc0df; /* 하늘색 */
-  color: #ffffff;
-  text-align: center;
-  padding: 20px;
-  font-size: 4rem;
-  font-family: "Cafe24SsongSsong", sans-serif;
-  border: 4px solid #000000;
-  border-radius: 15px;
-  width: 60%;
-  margin: 0 auto;
-  box-shadow: 8px 8px 0px 0px #000000;
-}
-
-/* 본문 정렬 크기 */
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  position: relative;
-  z-index: 10;
-}
-
-.row {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  width: 100%;
-  max-width: 800px;
-}
-
-/* 이미지 영역 컨테이너 (정확한 영역 확보) */
-.image-container {
-  width: 130px;
-  height: 180px;
-  flex-shrink: 0;
-}
-
-/* =========================================
-   정밀한 3D 카드 플립 효과 (왼쪽->오른쪽)
-========================================= */
-.flip-card {
-  width: 100%;
-  height: 100%;
-  perspective: 1000px; /* 입체감 깊이 설정 */
-  cursor: pointer;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* 부드러운 회전 곡선 */
-  transform-style: preserve-3d; /* 하위 요소들의 3D 속성 유지 */
-}
-
-/* 마우스를 올렸을 때 Y축으로 180도 회전 */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* 앞면과 뒷면 겹치기 및 숨김 공통 처리 */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* 사파리 브라우저 호환 */
-  backface-visibility: hidden; /* 회전 시 뒷면을 숨김 */
-  border: 3px solid #000000; /* 네오 브루탈리즘 스타일 검은 테두리 */
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-/* 앞면 (마우스 올리기 전 - 왼쪽 사진) */
-.flip-card-front {
-  background-color: #bbb;
-  z-index: 2; /* 앞면에 우선순위 부여 */
-}
-
-/* 뒷면 (마우스 올린 후 - 오른쪽 사진) */
-.flip-card-back {
-  background-color: #bbb;
-  transform: rotateY(180deg); /* 미리 180도 뒤집어 숨겨둠 */
-}
-
-/* 이미지 꽉 차게 맞추기 */
-.flip-card-front img,
-.flip-card-back img {
+.background-layer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* =========================================
-   우측 말풍선 디자인 (모서리 비대칭)
-========================================= */
-.text-bubble {
-  flex-grow: 1;
-  border: 3px solid #000000;
-  padding: 30px 40px;
-  text-align: center;
-  border-radius: 15px 100px 100px 15px;
-  box-shadow: 5px 5px 0px #000000; /* 네오 브루탈리즘 그림자 효과 */
+/* 콘텐츠 공통 레이어 */
+.content-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1vw;
+  padding-bottom: 2vw;
+}
+/* ------------------------------------ */
+.main-title,
+.card,
+.card-badge,
+.skills-badge,
+.speech-bubble,
+.work-preview {
+  border: 0.17vw solid #000000;
 }
 
-.text-bubble p {
-  font-size: 2rem;
-  line-height: 1.6;
+.main-title {
+  background-color: #2db4cc;
+  width: 33vw;
+  height: 7vw;
+  border-radius: 0.64vw;
+  box-shadow: 0.34vw 0.34vw 0px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.8vw;
+}
+.main-title h1 {
+  color: #ffffff;
+  font-size: 3vw;
+  line-height: 1.15;
+  letter-spacing: 0.16vw;
+}
+
+.main-title.single-line {
+  height: 6vw;
+  margin-bottom: 1.8vw;
+}
+.main-title.single-line h1 {
+  font-size: 3.6vw;
+}
+
+.info-row {
+  display: flex;
+  gap: 2vw;
+  margin-bottom: 3vw;
+}
+.card {
+  position: relative;
+  width: 28.4vw;
+  height: 18vw;
+  border-radius: 0.88vw;
+  box-shadow: 0.44vw 0.44vw 0px #000000;
+  padding: 2.6vw 2vw 1.5vw 2.4vw;
+}
+.about-me {
+  background-color: #5cc1aa;
+}
+.contact {
+  background-color: #cca4eb;
+}
+
+.card-badge {
+  position: absolute;
+  top: -1.2vw;
+  left: 2vw;
+  width: 16.8vw;
+  height: 2.8vw;
+  background-color: #f7cb05;
+  color: #000000;
+  font-family: "NexonBazzi", sans-serif;
+  font-size: 1.8vw;
+  font-weight: 900;
+  border-radius: 0.4vw;
+  box-shadow: 0.28vw 0.28vw 0px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon svg {
+  width: 60px;
+  height: 60px;
+}
+.info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9vw;
+  color: #ffffff;
+  font-size: 1.5vw;
+  font-family: "NexonBazzi", sans-serif;
+}
+.info-list li {
+  display: flex;
+  align-items: center;
+}
+.info-list .label {
+  width: 6vw;
+}
+.info-list .icon {
+  margin-right: 1vw;
+  font-size: 1.3vw;
+  display: inline-flex;
+  justify-content: center;
+  width: 1.6vw;
+}
+.info-list a {
+  color: #ffffff;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 17vw;
+}
+
+.skills-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills-badge {
+  background-color: #e63e65;
+  color: #ffffff;
+  width: 23vw;
+  height: 3.2vw;
+  font-size: 1.8vw;
+  font-weight: 900;
+  border-radius: 0.6vw;
+  box-shadow: 0.28vw 0.28vw 0px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+.skills-container {
+  display: flex;
+  gap: 1.5vw;
+}
+.skill-tag {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 1.2vw;
+  font-weight: bold;
+  padding: 0.6vw 2.5vw;
+  border-radius: 2.4vw;
+  border: 0.14vw solid #ffffff;
+}
+
+/* --------------------------------------------- */
+.like-container {
+  display: flex;
+  width: 80vw;
+  gap: 4vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  width: 10vw;
+  max-height: 40vw;
+  overflow-y: auto;
+}
+
+/* 개별 이미지 박스 크기 설정 */
+.grid-img {
+  width: 100%;
+  height: 16vw;
+  overflow: hidden;
+}
+
+.grid-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bubble-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10vw;
+  width: 34vw;
+}
+.speech-bubble {
+  width: 100%;
+  min-height: 6.8vw;
+  padding: 1.5vw 2.6vw;
+  display: flex;
+  align-items: center;
+  border-radius: 0.8vw 3.6vw 3.6vw 0.8vw;
+  box-shadow: 0.32vw 0.32vw 0px #000000;
+}
+.speech-bubble p {
+  font-size: 1.5vw;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: "NexonBazzi", sans-serif;
+}
+.purple-bubble {
+  background-color: #cca4eb;
+}
+
+.mint-bubble p {
   color: #000000;
 }
-
-/* 각 행별 말풍선 색상 고유 지정 */
-.bubble-purple {
-  background-color: #dda2eb;
-}
-.bubble-cyan {
-  background-color: #1ed1db;
-}
-.bubble-yellow {
-  background-color: #ffe87a;
+.yellow-bubble {
+  background-color: #f7cb05;
 }
 
-/* =========================================
-   배경 네모 상자 오브젝트 디자인
-========================================= */
-.bg-shape {
-  position: absolute;
-  border: 3px solid #000000;
-  z-index: 1;
+/* ----------------portfolio------------------ */
+.works-container {
+  display: flex;
+  gap: 6.4vw;
+  justify-content: center;
+}
+.work-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
 }
 
-.yellow-box-top {
-  top: 0;
-  left: 5%;
-  width: 350px;
-  height: 180px;
-  background-color: #ffde00;
+.work-preview {
+  width: 20vw;
+  height: 23.2vw;
+  background-color: #ffffff;
+  border-radius: 0.4vw;
+  border: #000000 solid 0.1vw;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
-.pink-box-top {
-  top: 0;
-  right: 0;
-  width: 55%;
-  height: 180px;
-  background-color: #f04e8b;
+.work-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.pink-box-bottom {
-  bottom: 0;
-  left: 5%;
-  width: 400px;
-  height: 120px;
-  background-color: #f04e8b;
+
+.work-label-btn {
+  background-color: #fca896;
+  color: #020202;
+  font-size: 1.5vw;
+  font-weight: 900;
+  padding: 0.64vw 3.6vw;
+  border-radius: 3.2vw;
+  border: 0.2vw solid #000000;
+  box-shadow: 0.28vw 0.28vw 0px #000000;
+  text-align: center;
+  min-width: 11.2vw;
 }
-.mint-box-bottom {
-  bottom: 0;
-  right: 0;
-  width: 300px;
-  height: 150px;
-  background-color: #4ac7b6;
+.work-label-btn a {
+  color: #5f4a47;
+  text-decoration: none;
 }
-/* ------------------포트폴리오------------------- */
