@@ -190,8 +190,8 @@
 }
 
 .main-title.single-line {
-  height: 6vw;
-  margin-bottom: 1.8vw;
+  height: 5vw;
+  margin-bottom: 1vw;
 }
 .main-title.single-line h1 {
   font-size: 3.6vw;
@@ -234,10 +234,39 @@
   justify-content: center;
   align-items: center;
 }
-
-.icon svg {
-  width: 60px;
-  height: 60px;
+.card.about-me,
+.card.contact {
+  position: relative;
+  padding: 2.8vw 2.5vw 2.5vw 2.5vw;
+  box-sizing: border-box;
+}
+.card.about-me .info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  margin-top: 1vw;
+  padding-left: 1vw;
+}
+.card.about-me .info-list .label {
+  width: 5vw;
+  margin-right: 0.3vw;
+}
+.card.contact .info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8vw;
+  margin-top: 1vw;
+  padding-left: 1vw;
+}
+.card.contact .info-list .icon {
+  margin-right: 1.5vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.card.contact .info-list .icon svg {
+  width: 1.5vw;
+  height: 1.5vw;
 }
 .info-list {
   list-style: none;
@@ -248,6 +277,12 @@
   font-size: 1.5vw;
   font-family: "NexonBazzi", sans-serif;
 }
+
+.icon svg {
+  width: 60px;
+  height: 60px;
+}
+
 .info-list li {
   display: flex;
   align-items: center;
@@ -270,7 +305,6 @@
   white-space: nowrap;
   max-width: 17vw;
 }
-
 .skills-area {
   display: flex;
   flex-direction: column;
@@ -325,7 +359,7 @@
 /* 개별 이미지 박스 크기 설정 */
 .grid-img {
   width: 100%;
-  height: 16vw;
+  height: 15vw;
   overflow: hidden;
 }
 
