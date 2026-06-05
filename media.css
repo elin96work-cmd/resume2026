@@ -1,30 +1,47 @@
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   /*------------메인 사진 및 텍스트 -----------*/
-  .site-header_inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  .site-header-inner {
+    display: flex !important;
+    flex-direction: column !important; /* 🌟 가로에서 세로 배치로 변경하여 메뉴를 밑으로 내림 */
+    align-items: flex-start !important; /* 로고와 메뉴를 가운데 정렬 */
+    gap: 15px !important; /* 로고와 메뉴 사이의 위아래 간격 */
+    padding-top: 5px !important; /* 🌟 위쪽 여백을 5px로 확 줄여서 위로 붙입니다 */
+    padding-bottom: 30px !important; /* 🌟 아래쪽 여백을 늘려서 글자들을 위로 밀어 올립니다 */
+    padding-left: 20px !important; /* 좌우 여백은 그대로 유지 */
+    padding-right: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box;
   }
-  .site-header {
-    height: auto;
-    padding-bottom: 13px;
-  }
+
   .logo {
-    font-size: 20px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    font-size: 22px !important;
+    margin: 0 !important;
+    width: auto !important; /* 너비를 자동으로 두어 글자 크기만큼만 차지하게 함 */
+    display: block !important;
+  }
+  .logo a {
+    display: block !important;
+    text-align: left !important; /* 🌟 글자도 왼쪽 정렬 */
+  }
+  .site-nav {
+    display: flex !important;
+    width: 100% !important;
+    margin-top: 18px;
+    justify-content: flex-end;
   }
   .site-nav ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 10px;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: row !important; /* 🌟 메뉴 아이템들은 가로로 나란히 배치 */
+    justify-content: flex-end !important; /* 🌟 메뉴들도 왼쪽부터 조르르 배치 */
+    gap: 10px !important; /* 메뉴 아이템(ABOUT, LIKE IT...) 사이 가로 간격 */
+    list-style: none !important;
   }
   .site-nav a {
-    font-size: 14px;
+    font-size: 20px !important;
+    white-space: nowrap !important; /* 화면이 좁아도 글자가 위아래로 쪼개지지 않게 방지 */
   }
+
   .mini-main {
     display: flex;
     flex-direction: column;
@@ -56,17 +73,26 @@
     margin-bottom: 15px;
   }
   /* -------------about------------- */
-  .info-row {
-    display: flex;
-    flex-direction: column; /* 🌟 핵심: 가로 배치에서 세로 배치로 변경! */
-    align-items: center; /* 카드들을 가운데 정렬 */
-    gap: 20px; /* 위아래 카드 사이의 여백 */
-    width: 100%;
-    padding: 0 10px; /* 양옆 화면에 너무 붙지 않게 여백 추가 */
-    box-sizing: border-box;
+
+  .main-title {
+    text-align: center; /* 글자를 가운데 정렬 */
+    margin-bottom: 20px; /* 아래 카드들과의 간격 */
+    width: 90%;
+    padding-top: 18px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    background-color: #5edae5;
+    border: 3px solid #000;
+    border-radius: 18px;
+    box-shadow: 4px 4px 0px #000;
   }
-  .card {
-    width: 100% !important; /* 혹은 본인이 쓴 클래스명(.card.about-me 등)에 맞춰주세요 */
-    max-width: 280px; /* 320px 화면에서 넘치지 않는 안전한 최대 너비 */
+
+  .main-title h1 {
+    font-size: 30px !important; /* 🌟 원래 크기보다 큼직하게 확대 (원하는 대로 조절 가능) */
+    line-height: 0.9; /* 줄바꿈 되었을 때 위아래 간격을 적당히 좁혀줌 */
+    font-weight: bold;
+    margin: 0;
   }
 }
