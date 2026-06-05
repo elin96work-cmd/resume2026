@@ -8,7 +8,9 @@
   background-color: rgba(255, 248, 243, 0.88);
   backdrop-filter: blur(12px);
   z-index: 100;
+  display: flex;
 }
+
 .logo {
   margin: 0;
   display: inline-block;
@@ -64,26 +66,41 @@
 }
 /* ---------------메인 텍스트-----------------*/
 .mini-main {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
+  padding: 0 40px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.mini_main-img {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mini_main-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .mini_main-text {
-  position: absolute;
-  top: 60%;
-  right: 20%;
-  transform: translateY(-50%);
+  flex: 1;
   max-width: 600px;
   text-align: left;
   z-index: 10;
 }
 
 .mini_main-text p {
-  font-size: 34px;
+  font-size: 33.3px;
   font-family: "NexonBazzi", sans-serif;
-  line-height: 2;
-  margin-bottom: 20px;
+  line-height: 4vw;
+  margin-bottom: 1.5vw;
 }
 .mini_main-text a {
   background-color: rgb(237, 255, 135);
@@ -158,7 +175,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 1vw;
-  padding-bottom: 2vw;
+  padding-bottom: 3vw;
 }
 /* ------------------------------------ */
 .main-title,
@@ -180,7 +197,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 1.8vw;
+  margin-bottom: 3.5vw;
 }
 .main-title h1 {
   color: #ffffff;
@@ -191,7 +208,7 @@
 
 .main-title.single-line {
   height: 5vw;
-  margin-bottom: 1vw;
+  margin-bottom: 3vw;
 }
 .main-title.single-line h1 {
   font-size: 3.6vw;
@@ -412,6 +429,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2vw;
+  margin-top: 1.5vw;
 }
 
 .work-preview {
@@ -434,12 +452,13 @@
   color: #020202;
   font-size: 1.5vw;
   font-weight: 900;
-  padding: 0.64vw 3.6vw;
+  padding: 0.7vw 3.6vw;
   border-radius: 3.2vw;
   border: 0.2vw solid #000000;
   box-shadow: 0.28vw 0.28vw 0px #000000;
   text-align: center;
   min-width: 11.2vw;
+  margin-top: 2vw;
 }
 .work-label-btn a {
   color: #5f4a47;

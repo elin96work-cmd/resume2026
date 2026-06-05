@@ -1,0 +1,72 @@
+@media (max-width: 320px) {
+  /*------------메인 사진 및 텍스트 -----------*/
+  .site-header_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .site-header {
+    height: auto;
+    padding-bottom: 13px;
+  }
+  .logo {
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .site-nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+  }
+  .site-nav a {
+    font-size: 14px;
+  }
+  .mini-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 40px 20px;
+    height: auto;
+    min-height: auto;
+  }
+  .mini_main-img {
+    width: 100%;
+    max-width: 260px; /* 320px 폰 화면에서도 이미지가 튀어나가지 않게 제한 */
+    display: flex;
+    justify-content: center;
+  }
+  .mini_main-img img {
+    width: 100%;
+    height: auto;
+  }
+  .mini_main-text {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .mini_main-text p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  /* -------------about------------- */
+  .info-row {
+    display: flex;
+    flex-direction: column; /* 🌟 핵심: 가로 배치에서 세로 배치로 변경! */
+    align-items: center; /* 카드들을 가운데 정렬 */
+    gap: 20px; /* 위아래 카드 사이의 여백 */
+    width: 100%;
+    padding: 0 10px; /* 양옆 화면에 너무 붙지 않게 여백 추가 */
+    box-sizing: border-box;
+  }
+  .card {
+    width: 100% !important; /* 혹은 본인이 쓴 클래스명(.card.about-me 등)에 맞춰주세요 */
+    max-width: 280px; /* 320px 화면에서 넘치지 않는 안전한 최대 너비 */
+  }
+}
