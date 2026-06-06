@@ -1,43 +1,29 @@
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   /*------------메인 사진 및 텍스트 -----------*/
   .site-header-inner {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     gap: 15px !important;
     width: 100% !important;
-    box-sizing: border-box;
-    padding: 5px 20px 35px 20px !important;
+    box-sizing: border-box !important;
+    padding: 5px 20px 20px 20px !important;
   }
 
   .logo {
-    font-size: 22px !important;
-    margin: 0 !important;
-    width: auto !important;
     display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    font-size: 22px !important;
   }
+
   .logo a {
     display: flex !important;
-    text-align: left !important;
+    text-align: center !important;
+    color: #5c4b43 !important;
   }
-  .site-nav {
-    display: flex !important;
-    width: 100% !important;
-    margin-top: 18px;
-    justify-content: flex-end;
-  }
-  .site-nav ul {
-    margin: 0 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: flex-end !important;
-    gap: 5px !important;
-    list-style: none !important;
-  }
-  .site-nav a {
-    font-size: 20px !important;
-    white-space: nowrap !important; /* 화면이 좁아도 글자가 위아래로 쪼개지지 않게 방지 */
-  }
+  /* -----------메인 사진 및 텍스트-------- */
 
   .mini-main {
     display: flex;
@@ -60,37 +46,35 @@
     height: auto;
   }
   .mini_main-text {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
   }
   .mini_main-text p {
-    font-size: 30px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    white-space: nowrap !important;
+    white-space: normal !important;
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+    word-break: keep-all !important;
   }
   /* -------------about------------- */
 
   .main-head {
-    text-align: center;
-    margin-bottom: 50px;
-    width: 50%;
-    display: inline-block;
-    background-color: #5edae5;
-    border: 3px solid #000;
-    border-radius: 18px;
-    box-shadow: 4px 4px 0px #000;
-    padding: 45px 10px 45px 10px;
+    width: 85% !important;
+    max-width: 320px !important;
+    padding: 30px 10px !important;
+    margin: 0 auto 30px auto !important;
+    display: block !important;
   }
 
   .main-head h1 {
-    font-size: 45px !important;
-    color: #fff;
-    line-height: 0.9;
-    font-weight: bold;
-    white-space: nowrap !important;
-    margin-top: -40px;
+    white-space: normal !important;
+    font-size: 28px !important;
+    line-height: 1 !important;
+    margin-top: -23px !important;
+    text-align: center !important;
   }
   /* ------------- */
   .info-row {
@@ -102,7 +86,6 @@
     padding: 0 20px !important;
     box-sizing: border-box !important;
   }
-
   .card.about-me,
   .card.contact {
     width: 100% !important;
@@ -110,10 +93,14 @@
     height: auto !important;
   }
   .card-badge {
-    font-size: 30px;
-    text-align: center;
-    padding: 20px 120px 20px 120px;
-    margin: -20px 70px 20px 120px;
+    margin: -7px auto 15px auto !important;
+    width: 75% !important;
+    max-width: 220px !important;
+    padding: 10px 15px !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
   }
   .info-list {
     display: flex !important;
@@ -138,27 +125,44 @@
 
   /* -----------------------------footer-------------------*/
 
+  .skill-list,
+  .skills-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+  }
   .skills-badge {
-    font-size: 30px !important;
+    font-size: 25px !important;
     margin-top: 20px;
     margin-bottom: 25px !important;
     font-weight: bold !important;
-    padding: 35px 100px 35px 100px;
+    padding: 30px 50px 30px 50px;
   }
 
-  .skill-tag {
-    padding: 15px 30px !important;
-    font-size: 20px !important;
-    font-weight: 500 !important;
-    border-radius: 50px !important;
-  }
-
-  .skills-container {
-    gap: 20px !important;
-    margin-top: 0 !important;
+  .skill-tag,
+  .skills-container span {
+    white-space: nowrap !important;
+    font-size: 14px !important;
+    padding: 6px 12px !important;
+    display: inline-block !important;
   }
   /* ----------------------------like---------------------------- */
 
+  .main-title {
+    /* 💡 핵심 1: 거대했던 PC용 마진(좌우 120px)을 제거하고 모바일에 맞춰 슬림하게 조정 */
+    margin: 80px auto 30px auto !important; /* 위쪽 여백은 80px로 줄이고, 좌우는 정가운데 정렬 */
+
+    width: 90% !important; /* 화면 폭의 90%를 채우도록 설정 */
+    max-width: 500px !important;
+    display: flex !important;
+    flex-direction: column !important; /* 모바일에서는 타이틀 텍스트와 아이콘을 세로로 정렬 (필요시) */
+    align-items: center !important; /* 중앙 정렬 */
+    box-sizing: border-box !important;
+  }
   .main-title.single-line {
     text-align: center;
     margin-bottom: 50px;
@@ -170,13 +174,14 @@
     box-shadow: 4px 4px 0px #000;
     padding: 45px 10px 45px 10px;
   }
-  .main-title.single-line h1 {
-    font-size: 45px !important;
-    color: #fff;
-    line-height: 0.9;
-    font-weight: bold;
-    white-space: nowrap !important;
-    margin-top: -20px;
+  .main-title.single-line h1,
+  .speech-bubble {
+    font-size: 36px !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
   }
   .like-container {
     display: flex;
@@ -196,24 +201,10 @@
   }
 
   .grid-img {
-    width: 35%;
-    max-width: 180px;
-    height: 120px;
-    overflow: hidden;
-    border-radius: 8px;
-  }
-
-  .grid-img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .speech-bubble {
-    width: 60%;
-    max-width: 300px;
-    padding: 30px 15px;
-    min-height: auto;
+    height: auto;
+    display: block;
+    border-radius: 8px;
   }
 
   .speech-bubble p {
