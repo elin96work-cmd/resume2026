@@ -178,44 +178,58 @@
     white-space: nowrap !important;
     margin-top: -20px;
   }
-  .gallery-grid {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-  }
-  .grid-img {
-    display: grid;
-    grid-template-columns: 1fr;
+  .like-container {
+    display: flex;
+    flex-direction: column;
     gap: 30px;
-    justify-items: center;
+    width: 95vw;
+    margin: 0 auto;
+  }
+
+  .like-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .grid-img {
+    width: 35%;
+    max-width: 180px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
   }
 
   .grid-img img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
+
   .speech-bubble {
-    width: 90%;
-    max-width: 250px;
-    padding: 10px 5px 10px 5px;
+    width: 60%;
+    max-width: 300px;
+    padding: 30px 15px;
+    min-height: auto;
   }
-  .speech-bubble.purple-bubble p {
-    font-size: 20px;
-  }
-  .speech-bubble.yellow-bubble p {
-    font-size: 20px;
+
+  .speech-bubble p {
+    font-size: 16px;
+    line-height: 1.4;
   }
   /* -----------------------------portfolio-------------------- */
   .works-container {
     display: flex;
-    flex-direction: column; /* 카드들을 세로로 나열 */
-    align-items: center; /* 가운데 정렬 */
-    gap: 30px; /* 카드와 카드 사이의 세로 간격 */
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
-  /* 2. 각 카드 박스 너비 지정 */
   .work-box {
-    width: 90%; /* 모바일 화면 좌우 여백을 약간 남기고 채우기 */
+    width: 90%;
     max-width: 300px;
     height: auto;
     display: flex;
@@ -223,7 +237,6 @@
     align-items: center;
   }
 
-  /* 3. 이미지 크기 조절 */
   .work-preview {
     width: 100%;
     height: auto;
@@ -231,22 +244,21 @@
 
   .work-preview img {
     width: 100%;
-    height: auto; /* 비율 유지하며 확대 */
+    height: auto;
     display: block;
-    border-radius: 8px; /* 필요시 모서리 둥글게 */
+    border-radius: 8px;
   }
 
-  /* 4. 버튼 크기 및 간격 조절 */
   .work-label-btn {
-    margin-top: 10px; /* 이미지와 버튼 사이의 간격 */
-    width: 70%; /* 버튼 너비 (원하는 크기로 %나 px 조절 가능) */
+    margin-top: 10px;
+    width: 70%;
     max-width: 250px;
     text-align: center;
   }
 
   .work-label-btn a {
     display: block;
-    padding: 10px 0; /* 버튼의 위아래 패딩을 늘려 터치하기 쉽게 크기 확장 */
-    font-size: 18px; /* 모바일 환경에 맞는 글자 크기 조정 */
+    padding: 10px 0;
+    font-size: 18px;
   }
 }
