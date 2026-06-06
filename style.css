@@ -178,7 +178,7 @@
   padding-bottom: 3vw;
 }
 /* ------------------------------------ */
-.main-title,
+.main-head,
 .card,
 .card-badge,
 .skills-badge,
@@ -187,7 +187,7 @@
   border: 0.17vw solid #000000;
 }
 
-.main-title {
+.main-head {
   background-color: #2db4cc;
   width: 33vw;
   height: 7vw;
@@ -199,7 +199,7 @@
   text-align: center;
   margin-bottom: 3.5vw;
 }
-.main-title h1 {
+.main-head h1 {
   color: #ffffff;
   font-size: 3vw;
   line-height: 1.15;
@@ -207,11 +207,21 @@
 }
 
 .main-title.single-line {
-  height: 5vw;
-  margin-bottom: 3vw;
+  background-color: #2db4cc;
+  width: 33vw;
+  height: 7vw;
+  border: solid 2px #000000;
+  border-radius: 0.64vw;
+  box-shadow: 0.34vw 0.34vw 0px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3.5vw;
 }
 .main-title.single-line h1 {
   font-size: 3.6vw;
+  color: #fff;
 }
 
 .info-row {

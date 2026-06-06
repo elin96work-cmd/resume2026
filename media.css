@@ -2,26 +2,23 @@
   /*------------메인 사진 및 텍스트 -----------*/
   .site-header-inner {
     display: flex !important;
-    flex-direction: column !important; /* 🌟 가로에서 세로 배치로 변경하여 메뉴를 밑으로 내림 */
-    align-items: flex-start !important; /* 로고와 메뉴를 가운데 정렬 */
-    gap: 15px !important; /* 로고와 메뉴 사이의 위아래 간격 */
-    padding-top: 5px !important; /* 🌟 위쪽 여백을 5px로 확 줄여서 위로 붙입니다 */
-    padding-bottom: 30px !important; /* 🌟 아래쪽 여백을 늘려서 글자들을 위로 밀어 올립니다 */
-    padding-left: 20px !important; /* 좌우 여백은 그대로 유지 */
-    padding-right: 20px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
     width: 100% !important;
     box-sizing: border-box;
+    padding: 5px 20px 35px 20px !important;
   }
 
   .logo {
     font-size: 22px !important;
     margin: 0 !important;
-    width: auto !important; /* 너비를 자동으로 두어 글자 크기만큼만 차지하게 함 */
-    display: block !important;
+    width: auto !important;
+    display: flex !important;
   }
   .logo a {
-    display: block !important;
-    text-align: left !important; /* 🌟 글자도 왼쪽 정렬 */
+    display: flex !important;
+    text-align: left !important;
   }
   .site-nav {
     display: flex !important;
@@ -32,9 +29,9 @@
   .site-nav ul {
     margin: 0 !important;
     display: flex !important;
-    flex-direction: row !important; /* 🌟 메뉴 아이템들은 가로로 나란히 배치 */
-    justify-content: flex-end !important; /* 🌟 메뉴들도 왼쪽부터 조르르 배치 */
-    gap: 10px !important; /* 메뉴 아이템(ABOUT, LIKE IT...) 사이 가로 간격 */
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
     list-style: none !important;
   }
   .site-nav a {
@@ -54,7 +51,7 @@
   }
   .mini_main-img {
     width: 100%;
-    max-width: 260px; /* 320px 폰 화면에서도 이미지가 튀어나가지 않게 제한 */
+    max-width: 600px;
     display: flex;
     justify-content: center;
   }
@@ -68,31 +65,188 @@
     text-align: center;
   }
   .mini_main-text p {
-    font-size: 19px;
+    font-size: 30px;
     line-height: 1.6;
     margin-bottom: 15px;
+    white-space: nowrap !important;
   }
   /* -------------about------------- */
 
-  .main-title {
-    text-align: center; /* 글자를 가운데 정렬 */
-    margin-bottom: 20px; /* 아래 카드들과의 간격 */
-    width: 90%;
-    padding-top: 18px;
-    padding-bottom: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+  .main-head {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 50%;
     display: inline-block;
     background-color: #5edae5;
     border: 3px solid #000;
     border-radius: 18px;
     box-shadow: 4px 4px 0px #000;
+    padding: 45px 10px 45px 10px;
   }
 
-  .main-title h1 {
-    font-size: 30px !important; /* 🌟 원래 크기보다 큼직하게 확대 (원하는 대로 조절 가능) */
-    line-height: 0.9; /* 줄바꿈 되었을 때 위아래 간격을 적당히 좁혀줌 */
+  .main-head h1 {
+    font-size: 45px !important;
+    color: #fff;
+    line-height: 0.9;
     font-weight: bold;
-    margin: 0;
+    white-space: nowrap !important;
+    margin-top: -40px;
+  }
+  /* ------------- */
+  .info-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .card.about-me,
+  .card.contact {
+    width: 100% !important;
+    max-width: 530px !important;
+    height: auto !important;
+  }
+  .card-badge {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 120px 20px 120px;
+    margin: -20px 70px 20px 120px;
+  }
+  .info-list {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 0 15px !important;
+    margin: 0 !important;
+    list-style: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .info-list li {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+
+  /* -----------------------------footer-------------------*/
+
+  .skills-badge {
+    font-size: 30px !important;
+    margin-top: 20px;
+    margin-bottom: 25px !important;
+    font-weight: bold !important;
+    padding: 35px 100px 35px 100px;
+  }
+
+  .skill-tag {
+    padding: 15px 30px !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    border-radius: 50px !important;
+  }
+
+  .skills-container {
+    gap: 20px !important;
+    margin-top: 0 !important;
+  }
+  /* ----------------------------like---------------------------- */
+
+  .main-title.single-line {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 50%;
+    display: inline-block;
+    background-color: #5edae5;
+    border: 3px solid #000;
+    border-radius: 18px;
+    box-shadow: 4px 4px 0px #000;
+    padding: 45px 10px 45px 10px;
+  }
+  .main-title.single-line h1 {
+    font-size: 45px !important;
+    color: #fff;
+    line-height: 0.9;
+    font-weight: bold;
+    white-space: nowrap !important;
+    margin-top: -20px;
+  }
+  .gallery-grid {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+  }
+  .grid-img {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+  }
+
+  .grid-img img {
+    width: 100%;
+    height: auto;
+  }
+  .speech-bubble {
+    width: 90%;
+    max-width: 250px;
+    padding: 10px 5px 10px 5px;
+  }
+  .speech-bubble.purple-bubble p {
+    font-size: 20px;
+  }
+  .speech-bubble.yellow-bubble p {
+    font-size: 20px;
+  }
+  /* -----------------------------portfolio-------------------- */
+  .works-container {
+    display: flex;
+    flex-direction: column; /* 카드들을 세로로 나열 */
+    align-items: center; /* 가운데 정렬 */
+    gap: 30px; /* 카드와 카드 사이의 세로 간격 */
+  }
+
+  /* 2. 각 카드 박스 너비 지정 */
+  .work-box {
+    width: 90%; /* 모바일 화면 좌우 여백을 약간 남기고 채우기 */
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 3. 이미지 크기 조절 */
+  .work-preview {
+    width: 100%;
+    height: auto;
+  }
+
+  .work-preview img {
+    width: 100%;
+    height: auto; /* 비율 유지하며 확대 */
+    display: block;
+    border-radius: 8px; /* 필요시 모서리 둥글게 */
+  }
+
+  /* 4. 버튼 크기 및 간격 조절 */
+  .work-label-btn {
+    margin-top: 10px; /* 이미지와 버튼 사이의 간격 */
+    width: 70%; /* 버튼 너비 (원하는 크기로 %나 px 조절 가능) */
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .work-label-btn a {
+    display: block;
+    padding: 10px 0; /* 버튼의 위아래 패딩을 늘려 터치하기 쉽게 크기 확장 */
+    font-size: 18px; /* 모바일 환경에 맞는 글자 크기 조정 */
   }
 }
